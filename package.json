@@ -1,0 +1,7 @@
+{
+  "name": "exalted-lincd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Zak Strassberg <zakstrassberg@gmail.com>",
+  "license": "MIT"
+}
