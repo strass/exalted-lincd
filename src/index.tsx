@@ -14,38 +14,40 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Outlet />,
-    children: [
-      {
-        path: "charms",
-        children: [
-          {
-            index: true,
-            element: <CharmsIndexRoute />,
-            loader: charmsIndexLoader,
-          },
-          {
-            path: "new",
-            element: <CharmAddRoute />,
-            action: charmAddAction,
-          },
-          {
-            path: ":id",
-            element: <CharmViewRoute />,
-            errorElement: <CharmViewError />,
-            loader: charmViewLoader,
-          },
-        ],
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Outlet />,
+      children: [
+        {
+          path: "charms",
+          children: [
+            {
+              index: true,
+              element: <CharmsIndexRoute />,
+              loader: charmsIndexLoader,
+            },
+            {
+              path: "new",
+              element: <CharmAddRoute />,
+              action: charmAddAction,
+            },
+            {
+              path: ":id",
+              element: <CharmViewRoute />,
+              errorElement: <CharmViewError />,
+              loader: charmViewLoader,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  { basename: "exalted-lincd" }
+);
 
-const queryClient = new QueryClient()
-
+const queryClient = new QueryClient();
 
 root.render(
   <React.StrictMode>
