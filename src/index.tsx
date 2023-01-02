@@ -5,10 +5,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import CharmsIndexRoute, { loader as charmsIndexLoader } from "./routes/Charms";
 import CharmAddRoute, { action as charmAddAction } from "./routes/Charms/Add";
-import CharmViewRoute, {
-  CharmViewError,
-  loader as charmViewLoader,
-} from "./routes/Charms/View";
+import CharmViewRoute, { CharmViewError } from "./routes/Charms/View";
 import CharmsetViewRoute from "./routes/Charmset/View";
 
 const root = ReactDOM.createRoot(
@@ -38,7 +35,6 @@ const router = createBrowserRouter(
               path: ":id",
               element: <CharmViewRoute />,
               errorElement: <CharmViewError />,
-              loader: charmViewLoader,
             },
           ],
         },
