@@ -44,7 +44,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "exalted-lincd" }
+  { basename: "/exalted-lincd" }
 );
 
 const queryClient = new QueryClient();

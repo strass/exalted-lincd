@@ -34,8 +34,6 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-      - name: Create 404 page to act as redirect
-        run: cp build/index.html build/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
