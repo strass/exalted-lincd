@@ -1,4 +1,5 @@
 import { NamedNode } from "lincd/lib/models";
+// @ts-expect-error no types for lincd-jsonld
 import { JSONLD } from "lincd-jsonld/lib/utils/JSONLD";
 import { createNameSpace } from "lincd/lib/utils/NameSpace";
 import { linkedOntology } from "../package";
@@ -15,7 +16,7 @@ export var loadData = () => {
 /**
  * The namespace of this ontology, which can be used to create NamedNodes with URI's not listed in this file
  */
-export var ns = createNameSpace("https://rdf.essence.ooo");
+export var ns = createNameSpace("http://www.szoreny.essence.ooo/ontology#");
 
 /**
  * The NamedNode of the ontology itself
@@ -23,13 +24,36 @@ export var ns = createNameSpace("https://rdf.essence.ooo");
 export var _self: NamedNode = ns("");
 
 //A list of all the entities (Classes & Properties) of this ontology, each exported as a NamedNode
-export var ExampleClass: NamedNode = ns("ExampleClass");
-export var exampleProperty: NamedNode = ns("exampleProperty");
+export var Character: NamedNode = ns("Character");
+export var Charm: NamedNode = ns("E3Charm");
+
+/** @deprecated TODO: switch to rdfs.label */
+export var name: NamedNode = ns("characterName");
+
+/** How many motes a charmlike costs */
+export const moteCost = ns("mote_cost");
+
+/** TODO: rename mins */
+export const requirements = ns("requirements");
+
+export const description = ns("description");
+export const charmType = ns("charm_type");
+export const charmKeyword = ns("charm_keyword");
+export const charmDuration = ns("charm_duration");
+export const charmPrerequisite = ns("charm_prerequisite");
 
 //An extra grouping object so all the entities can be accessed from the prefix/name
 export const ex3 = {
-  ExampleClass,
-  exampleProperty,
+  Character,
+  Charm,
+  name,
+  moteCost,
+  requirements,
+  description,
+  charmType,
+  charmKeyword,
+  charmDuration,
+  charmPrerequisite,
 };
 
 //Registers this ontology to LINCD.JS, so that data loading can be automated amongst other things

@@ -4,17 +4,25 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "ex3": "https://rdf.essence.ooo"
+    "ex3": "https://rdf.essence.ooo",
+    "ex3discord": "https://discord.essence.ooo"
   },
   "@graph": [
     {
-      "@id": "ex3:ExampleClass",
+      "@id": "ex3:Charm",
       "@type": "rdfs:Class",
-      "rdfs:comment": "This is an example class. You can remove or rename it",
       "rdfs:isDefinedBy": {
         "@id": "ex3:"
       },
-      "rdfs:label": "Example Class"
+      "rdfs:label": "Charm Template"
+    },
+    {
+      "@id": "http://essence.ooo/charms/graceful-crane-stance",
+      "@type": "ex3:Charm",
+      "exdiscord:template": "exdiscord:ex3charm",
+      "rdfs:label": "xxxxx Graceful Crane Stance",
+      "rdfs:description": "The Solar draws Essence through her pores and into her bones, suffusing and lightening her form and steadying her step. For the rest of the scene, she has perfect balance, and can stand or run on things too narrow or weak to support her normally, with no chance of falling or breaking through. She can run on a guy wire, stand on a crumbling parapet, balance on the tip of a pine tree, and perform many similar feats without needing to roll (Dexterity + Athletics).",
+      "ex3:mote_cost": "2"
     }
   ]
 }
