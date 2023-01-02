@@ -1,45 +1,77 @@
-[ {
-  "@id" : "http://www.szoreny.essence.ooo/ontology#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
-}, {
-  "@id" : "http://www.szoreny.essence.ooo/ontology#graceful_crane_stance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.szoreny.essence.ooo/ontology#E3Charm" ],
-  "http://www.szoreny.essence.ooo/ontology#abilityRequirement" : [ {
-    "@value" : "Athletics 1"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#charm_duration" : [ {
-    "@value" : "One Scene"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#charm_type" : [ {
-    "@value" : "Reflexive"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#cost" : [ {
-    "@value" : "1m"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#description" : [ {
-    "@value" : "The Solar draws Essence through her pores and into her bones, suffusing and lightening her form and steadying her step. For the rest of the scene, she has perfect balance, and can stand or run on things too narrow or weak to support her normally, with no chance of falling or breaking through. She can run on a guy wire, stand on a crumbling parapet, balance on the tip of a pine tree, and perform many similar feats without needing to roll (Dexterity + Athletics)."
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#essenceRequirement" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#isInCharmset" : [ {
-    "@id" : "http://www.szoreny.essence.ooo/ontology#solar-athletics"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#mote_cost" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
-    "@value" : "1"
-  } ],
-  "http://www.szoreny.essence.ooo/ontology#requirements" : [ {
-    "@value" : "Athletics 1, Essence 1"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Graceful Crane Stance"
-  } ]
-}, {
-  "@id" : "http://www.szoreny.essence.ooo/ontology#solar-athletics",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.szoreny.essence.ooo/ontology#Charmset" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Solar Athletics"
-  } ]
-} ]
+[
+  {
+    "@id": "http://www.szoreny.essence.ooo/ontology#",
+    "@type": ["http://www.w3.org/2002/07/owl#Ontology"]
+  },
+  {
+    "@id": "http://www.szoreny.essence.ooo/ontology#graceful_crane_stance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://www.szoreny.essence.ooo/ontology#E3Charm"
+    ],
+    "http://www.szoreny.essence.ooo/ontology#abilityRequirement": [
+      {
+        "@value": "Athletics 1"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#charm_duration": [
+      {
+        "@value": "One Scene"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#charm_type": [
+      {
+        "@value": "Reflexive"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#cost": [
+      {
+        "@value": "1m"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#description": [
+      {
+        "@value": "The Solar draws Essence through her pores and into her bones, suffusing and lightening her form and steadying her step. For the rest of the scene, she has perfect balance, and can stand or run on things too narrow or weak to support her normally, with no chance of falling or breaking through. She can run on a guy wire, stand on a crumbling parapet, balance on the tip of a pine tree, and perform many similar feats without needing to roll (Dexterity + Athletics)."
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#essenceRequirement": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#isInCharmset": [
+      {
+        "@id": "http://www.szoreny.essence.ooo/ontology#solar-athletics"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#mote_cost": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#positiveInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.szoreny.essence.ooo/ontology#requirements": [
+      {
+        "@value": "Athletics 1, Essence 1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Graceful Crane Stance"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.szoreny.essence.ooo/ontology#solar-athletics",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://www.szoreny.essence.ooo/ontology#Charmset"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Solar Athletics"
+      }
+    ]
+  }
+]
