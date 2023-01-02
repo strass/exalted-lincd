@@ -9,6 +9,7 @@ import CharmViewRoute, {
   CharmViewError,
   loader as charmViewLoader,
 } from "./routes/Charms/View";
+import CharmsetViewRoute from "./routes/Charmset/View";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -40,6 +41,10 @@ const router = createBrowserRouter(
               loader: charmViewLoader,
             },
           ],
+        },
+        {
+          path: "charmset",
+          children: [{ path: ":id", element: <CharmsetViewRoute /> }],
         },
       ],
     },

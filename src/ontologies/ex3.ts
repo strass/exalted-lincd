@@ -24,8 +24,9 @@ export var ns = createNameSpace("http://www.szoreny.essence.ooo/ontology#");
 export var _self: NamedNode = ns("");
 
 //A list of all the entities (Classes & Properties) of this ontology, each exported as a NamedNode
-export var Character: NamedNode = ns("Character");
-export var Charm: NamedNode = ns("E3Charm");
+export const Character = ns("Character");
+export const Charm = ns("E3Charm");
+export const Charmset = ns("Charmset");
 
 /** @deprecated TODO: switch to rdfs.label */
 export var name: NamedNode = ns("characterName");
@@ -42,6 +43,8 @@ export const charmKeyword = ns("charm_keyword");
 export const charmDuration = ns("charm_duration");
 export const charmPrerequisite = ns("charm_prerequisite");
 
+export const isInCharmset = ns("isInCharmset");
+
 //An extra grouping object so all the entities can be accessed from the prefix/name
 export const ex3 = {
   Character,
@@ -54,6 +57,7 @@ export const ex3 = {
   charmKeyword,
   charmDuration,
   charmPrerequisite,
+  isInCharmset,
 };
 
 //Registers this ontology to LINCD.JS, so that data loading can be automated amongst other things

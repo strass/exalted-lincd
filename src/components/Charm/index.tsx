@@ -1,13 +1,22 @@
+import { rdfs } from "lincd/lib/ontologies/rdfs";
 import React from "react";
+import { Link } from "react-router-dom";
 import { linkedComponent } from "../../package";
 import CharmClass from "../../shapes/CharmClass";
 
 const Charm = linkedComponent<CharmClass>(
   CharmClass,
-  ({ source, linkedData }) => {
+  ({ source }) => {
     return (
       <article>
-        <h1>{source.name}</h1>
+        <header>
+          <h1>{source.name}</h1>
+          {source.charmset.isInCharmset && (
+            <Link to={source.charmset.uri}>
+              {source.charmset.charmset?.getValue(rdfs.label)}
+            </Link>
+          )}
+        </header>
         <dl>
           <dt>Cost</dt>
           <dd>{source.moteCost}m</dd>

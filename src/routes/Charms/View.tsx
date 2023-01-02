@@ -14,7 +14,7 @@ export const loader = async ({ params: { id } }: LoaderFunctionArgs) => {
 
 const CharmViewRoute = () => {
   const { id } = useParams();
-  const { data: charm } = useQuery("test", async () => {
+  const { data: charm } = useQuery(`charm/${id}`, async () => {
     await JSONLD.parse(
       `${window.location.protocol}//${window.location.host}/${
         process.env.NODE_ENV !== "development" ? "exalted-lincd/" : ""
@@ -25,7 +25,7 @@ const CharmViewRoute = () => {
   if (!charm) {
     return null;
   }
-  console.log(charm.getProperties());
+
   if (charm.type.uri !== ex3.Charm.uri || charm.getProperties().size <= 1) {
     throw new Response("", { status: 404 });
   }

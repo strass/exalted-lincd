@@ -264,7 +264,10 @@
   } ]
 }, {
   "@id" : "http://www.szoreny.essence.ooo/ontology#solar-athletics",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.szoreny.essence.ooo/ontology#Charmset" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.szoreny.essence.ooo/ontology#Charmset" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Solar Athletics"
+  } ]
 }, {
   "@id" : "http://www.szoreny.essence.ooo/ontology#willpower_cost",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],

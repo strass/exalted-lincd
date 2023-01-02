@@ -1,5 +1,5 @@
 import { Shape } from "lincd/lib/shapes/Shape";
-import { Literal, Node } from "lincd/lib/models";
+import { Literal, NamedNode, Node } from "lincd/lib/models";
 import { linkedShape } from "../package";
 import { literalProperty } from "lincd/lib/utils/ShapeDecorators";
 import { rdfs } from "lincd/lib/ontologies/rdfs";
@@ -117,5 +117,17 @@ export default class Ex3Charm extends Shape {
   }
   set requirements(val: string) {
     this.overwrite(ex3.requirements, new Literal(val) as Node);
+  }
+
+  @literalProperty({ path: ex3.isInCharmset })
+  get charmset() {
+    const isInCharmset = this.getValue(ex3.isInCharmset);
+    const charmset = NamedNode.getNamedNode(isInCharmset as string);
+
+    return {
+      isInCharmset,
+      charmset,
+      uri: `/charmset/${charmset?.uri.split("#")[1]}`,
+    };
   }
 }
