@@ -15,7 +15,11 @@ export const loader = async ({ params: { id } }: LoaderFunctionArgs) => {
 const CharmViewRoute = () => {
   const { id } = useParams();
   const { data: charm } = useQuery("test", async () => {
-    await JSONLD.parse("http://localhost:3000/ex3ont.owl");
+    await JSONLD.parse(
+      `${window.location.protocol}//${window.location.host}/${
+        process.env.NODE_ENV !== "development" ? "exalted-lincd/" : ""
+      }ex3ont.owl`
+    );
     return Ex3Charm.getFromURI(`${ex3Namespace}${id}`);
   });
   if (!charm) {
