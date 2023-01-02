@@ -14,7 +14,7 @@ const CharmsetViewRoute = () => {
     await JSONLD.parse(
       `${window.location.protocol}//${window.location.host}/${
         process.env.NODE_ENV !== "development" ? "exalted-lincd/" : ""
-      }ex3ont.owl`
+      }ex3ont.json`
     );
     const charmset = NamedNode.getOrCreate(`${ex3Namespace}${id}`);
     const charms = Ex3Charm.searchLocal(
